@@ -39,6 +39,6 @@ resource "kubernetes_namespace" "this" {
 module "this" {
   source = "../.."
 
-  namespace                                  = kubernetes_namesapce.this.metadata.0.name
+  namespace                                  = kubernetes_namespace.this.metadata.0.name
   stateful_set_volume_claim_template_enabled = false
 }
