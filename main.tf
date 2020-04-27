@@ -168,11 +168,9 @@ resource "kubernetes_stateful_set" "this" {
             for_each = var.stateful_set_volume_claim_template_enabled ? [1] : []
 
             content {
-              volume_mount {
-                name       = var.stateful_set_volume_claim_template_name
-                mount_path = "/nexus-data"
-                sub_path   = ""
-              }
+              name       = var.stateful_set_volume_claim_template_name
+              mount_path = "/nexus-data"
+              sub_path   = ""
             }
           }
         }
@@ -206,7 +204,7 @@ resource "kubernetes_stateful_set" "this" {
         spec {
           access_modes       = ["ReadWriteOnce"]
           storage_class_name = var.stateful_set_volume_claim_template_storage_class
-          reousrces {
+          resources {
             requests = {
               storage = var.stateful_set_volume_claim_template_requests_storage
             }
