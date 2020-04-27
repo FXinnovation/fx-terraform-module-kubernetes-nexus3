@@ -188,7 +188,7 @@ resource "kubernetes_stateful_set" "this" {
             {},
             local.annotations,
             var.annotations,
-            var.stateful_set_volume_clain_template_annotations
+            var.stateful_set_volume_claim_template_annotations
           )
           labels = merge(
             {
@@ -341,7 +341,7 @@ resource "kubernetes_ingress" "this" {
     }
 
     dynamic "tls" {
-      for_each = var.ingress_tls_enabled ? [var.additional_ports] : []
+      for_each = var.ingress_tls_enabled ? var.additional_ports : []
 
       content {
         secret_name = value.tls_secret_name

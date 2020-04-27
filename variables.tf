@@ -124,7 +124,7 @@ variable "stateful_set_volume_claim_template_storage_class" {
   default     = null
 }
 
-variable "stateful_set_volume_claim_template_storage_requests" {
+variable "stateful_set_volume_claim_template_requests_storage" {
   description = "Size of storage the stateful set volume claim template requests."
   default     = "1024Gi"
 }
