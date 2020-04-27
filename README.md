@@ -52,7 +52,7 @@ Terraform module to deploy nexus3 on kubernetes. This module only allows for a s
 | stateful\_set\_volume\_claim\_template\_enabled | Whether or not to enable the volume claim template on the statefulset. | `bool` | `true` | no |
 | stateful\_set\_volume\_claim\_template\_labels | Map of labels that will be applied on the statefulset volume claim template. | `map` | `{}` | no |
 | stateful\_set\_volume\_claim\_template\_name | Name of the statefulset's volume claim template. | `string` | `"nexus3"` | no |
-| stateful\_set\_volume\_claim\_template\_requests\_storage | Size of storage the stateful set volume claim template requests. | `string` | `"1024Gi"` | no |
+| stateful\_set\_volume\_claim\_template\_requests\_storage | Size of storage the stateful set volume claim template requests. | `string` | `"1Ti"` | no |
 | stateful\_set\_volume\_claim\_template\_storage\_class | Storage class to use for the stateful set volume claim template. | `any` | `null` | no |
 
 ## Outputs
