@@ -1,3 +1,3 @@
 output "this" {
-  value = module.default
+  value = module.this
 }
