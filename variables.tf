@@ -174,8 +174,7 @@ variable "ingress_labels" {
 
 variable "ingress_host" {
   description = "Host on which the ingress wil be available (ex: nexus.example.com)."
-  type        = string
-  default     = null
+  default     = "example.com"
 }
 
 variable "ingress_tls_enabled" {

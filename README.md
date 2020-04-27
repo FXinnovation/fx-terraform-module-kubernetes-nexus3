@@ -29,7 +29,7 @@ Terraform module to deploy nexus3 on kubernetes. This module only allows for a s
 | image\_version | Version of the image to use. | `string` | `"master"` | no |
 | ingress\_annotations | Map of annotations that will be applied on the ingress. | `map` | `{}` | no |
 | ingress\_enabled | Whether or not to enable the ingress. | `bool` | `true` | no |
-| ingress\_host | Host on which the ingress wil be available (ex: nexus.example.com). | `string` | `null` | no |
+| ingress\_host | Host on which the ingress wil be available (ex: nexus.example.com). | `string` | `"example.com"` | no |
 | ingress\_labels | Map of labels that will be applied on the ingress. | `map` | `{}` | no |
 | ingress\_name | Name of the ingress. | `string` | `"nexus3"` | no |
 | ingress\_tls\_enabled | Whether or not TLS should be enabled on the ingress. | `bool` | `true` | no |
