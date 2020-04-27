@@ -131,9 +131,9 @@ resource "kubernetes_stateful_set" "this" {
             for_each = var.additional_ports
 
             content {
-              container_port = value.port
-              protocol       = value.protocol
-              name           = value.name
+              container_port = port.value.port
+              protocol       = port.value.protocol
+              name           = port.value.name
             }
           }
 
@@ -261,10 +261,10 @@ resource "kubernetes_service" "this" {
       for_each = var.additional_ports
 
       content {
-        port        = value.service_port
-        protocol    = value.protocol
-        name        = value.name
-        target_port = value.name
+        port        = port.value.service_port
+        protocol    = port.value.protocol
+        name        = port.value.name
+        target_port = port.value.name
       }
     }
   }
@@ -346,7 +346,7 @@ resource "kubernetes_ingress" "this" {
 
       content {
         secret_name = value.tls_secret_name
-        hosts       = [value.host]
+        hosts       = [tls.value.host]
       }
     }
   }
