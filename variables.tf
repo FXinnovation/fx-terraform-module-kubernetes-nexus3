@@ -59,12 +59,12 @@ variable "resources_limits_memory" {
 variable "additional_ports" {
   description = "Map of additional port on which you will configure nexus to listen on. To be used for some repository types which needs specific URL's (like a docker registry). All fields must be defined."
   type = list(object({
-    port             = number # Port number on which nexus will be listening
+    port             = number # Port number on which nexus will be listening (each port must be unique)
     protocol         = string # One of TCP or UDP
-    name             = string # Name you want to that port (ex: dkr-reg)
-    service_port     = number # Port number on which the service will be listening (can be the same as port)
-    host             = string # Host to which that port matches (ex: registry.example.com). Set to empty string if you're not using an ingress
-    ingress_tls_name = string # Name of the secret that will hold the TLS certificate. Set to empty sdtring if you're not using TLS on the ingress
+    name             = string # Name you want for that port (ex: dkr-reg)
+    service_port     = number # Port number on which the service will be listening on (can be the same as port, each service port must be unique)
+    host             = string # Host for that port that will be used (ex: registry.example.com). Set to empty string if you're not using an ingress
+    ingress_tls_name = string # Name of the secret that will hold the TLS certificate. Set to empty string if you're not using TLS on the ingress
   }))
   default = []
 }
