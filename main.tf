@@ -58,7 +58,7 @@ resource "kubernetes_stateful_set" "this" {
     replicas     = 1
     service_name = element(concat(kubernetes_service.this.*.metadata.0.name, list("")), 0)
 
-    update_strategy = {
+    update_strategy {
       type = "RollingUpdate"
     }
 
