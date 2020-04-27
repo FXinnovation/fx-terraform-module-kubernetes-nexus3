@@ -71,16 +71,15 @@ resource "kubernetes_stateful_set" "this" {
     template {
       metadata {
         annotations = merge(
-          {
-            selector = "nexus3-${element(concat(random_string.selector.*.result, list("")), 0)}"
-          },
           local.annotations,
           var.annotations,
           var.stateful_set_template_annotations
         )
         labels = merge(
           {
-            instance = var.stateful_set_name
+            instance  = var.stateful_set_name
+            component = "application"
+            selector  = "nexus3-${element(concat(random_string.selector.*.result, list("")), 0)}"
           },
           local.labels,
           var.labels,
