@@ -41,7 +41,7 @@ variable "resources_requests_cpu" {
   default     = "300m"
 }
 
-variable "resource_requests_memory" {
+variable "resources_requests_memory" {
   description = "Amount of memory that the application requests."
   default     = "1200Mi"
 }
@@ -51,7 +51,7 @@ variable "resources_limits_cpu" {
   default     = "1"
 }
 
-variable "resource_limits_memory" {
+variable "resources_limits_memory" {
   description = "Amount of memory that the application limits."
   default     = "2048Mi"
 }

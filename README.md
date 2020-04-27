@@ -36,10 +36,10 @@ Terraform module to deploy nexus3 on kubernetes. This module only allows for a s
 | ingress\_tls\_secret\_name | Name of the secret to use to put TLS on the ingress. | `string` | `"nexus3"` | no |
 | labels | Map of labels that will be applied on all resources. | `map` | `{}` | no |
 | namespace | Name of the namespace in which to deploy the module. | `string` | `"default"` | no |
-| resource\_limits\_memory | Amount of memory that the application limits. | `string` | `"2048Mi"` | no |
-| resource\_requests\_memory | Amount of memory that the application requests. | `string` | `"1200Mi"` | no |
 | resources\_limits\_cpu | Amount of cpu time that the application limits. | `string` | `"1"` | no |
+| resources\_limits\_memory | Amount of memory that the application limits. | `string` | `"2048Mi"` | no |
 | resources\_requests\_cpu | Amount of cpu time that the application requests. | `string` | `"300m"` | no |
+| resources\_requests\_memory | Amount of memory that the application requests. | `string` | `"1200Mi"` | no |
 | service\_annotations | Map of annotations that will be applied on the service. | `map` | `{}` | no |
 | service\_labels | Map of labels that will be applied on the service. | `map` | `{}` | no |
 | service\_name | Name of the service. | `string` | `"nexus3"` | no |
