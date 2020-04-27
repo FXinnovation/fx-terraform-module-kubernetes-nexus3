@@ -46,7 +46,7 @@ module "this" {
     protocol         = "TCP"
     name             = "dkr-reg"
     service_port     = 8082
-    host             = ""
-    ingress_tls_name = ""
+    host             = "registry.example.com"
+    ingress_tls_name = "neuxs3-registry"
   }]
 }
