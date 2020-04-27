@@ -55,9 +55,12 @@ resource "kubernetes_stateful_set" "this" {
   }
 
   spec {
-    replicas        = 1
-    update_strategy = "Recreate"
-    service_name    = element(concat(kubernetes_service.this.*.metadata.0.name, list("")), 0)
+    replicas     = 1
+    service_name = element(concat(kubernetes_service.this.*.metadata.0.name, list("")), 0)
+
+    update_strategy = {
+      type = "RollingUpdate"
+    }
 
     selector {
       match_labels = {
