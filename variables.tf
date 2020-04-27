@@ -66,6 +66,7 @@ variable "additional_ports" {
     host             = string # Host to which that port matches (ex: registry.example.com). Set to empty string if you're not using an ingress
     ingress_tls_name = string # Name of the secret that will hold the TLS certificate. Set to empty sdtring if you're not using TLS on the ingress
   }))
+  default = []
 }
 
 
