@@ -39,7 +39,7 @@ resource "kubernetes_namespace" "this" {
 module "this" {
   source = "../.."
 
-  namespace = kubernetes_namesapce.this.metadata.0.name
+  namespace = kubernetes_namespace.this.metadata.0.name
 
   additional_ports = [{
     port             = 8082
