@@ -60,7 +60,7 @@ Terraform module to deploy nexus3 on kubernetes. This module only allows for a s
 | Name | Description |
 |------|-------------|
 | ingress | n/a |
-| namespace | n/a |
+| namespace\_name | n/a |
 | service | n/a |
 | statefulset | n/a |
 

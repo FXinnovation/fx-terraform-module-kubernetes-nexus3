@@ -2,7 +2,7 @@
 # Global
 #####
 
-output "namespace" {
+output "namespace_name" {
   value = var.enabled ? var.namespace : ""
 }
 
