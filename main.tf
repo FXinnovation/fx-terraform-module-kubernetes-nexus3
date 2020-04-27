@@ -319,12 +319,12 @@ resource "kubernetes_ingress" "this" {
       for_each = var.additional_ports
 
       content {
-        host = value.host
+        host = rule.value.host
         http {
           path {
             backend {
               service_name = element(concat(kubernetes_service.this.*.metadata.0.name, list("")), 0)
-              service_port = value.name
+              service_port = rule.value.name
             }
             path = "/"
           }
@@ -345,7 +345,7 @@ resource "kubernetes_ingress" "this" {
       for_each = var.ingress_tls_enabled ? var.additional_ports : []
 
       content {
-        secret_name = value.tls_secret_name
+        secret_name = tls.value.ingress_tls_name
         hosts       = [tls.value.host]
       }
     }
