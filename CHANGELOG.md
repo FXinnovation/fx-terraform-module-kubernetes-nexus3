@@ -1,7 +1,8 @@
 
-0.1.0 / 2020-04-27
+0.1.0 / 2020-04-28
 ==================
 
+  * fix: Improve disabled example
   * fix: Typo's in comments
   * fix: Output name for the name of the namespace.
   * fix: with additionnal ports example
