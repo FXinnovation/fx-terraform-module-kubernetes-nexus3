@@ -26,7 +26,7 @@ Terraform module to deploy nexus3 on kubernetes. This module only allows for a s
 | annotations | Map of annotations that will be applied on all resources. | `map` | `{}` | no |
 | enabled | Whether or not to enable this module. | `bool` | `true` | no |
 | image | Image to use. | `string` | `"fxinnovation/nexus3"` | no |
-| image\_version | Version of the image to use. | `string` | `"master"` | no |
+| image\_version | Version of the image to use. | `string` | `"2.0.0"` | no |
 | ingress\_annotations | Map of annotations that will be applied on the ingress. | `map` | `{}` | no |
 | ingress\_enabled | Whether or not to enable the ingress. | `bool` | `true` | no |
 | ingress\_host | Host on which the ingress wil be available (ex: nexus.example.com). | `string` | `"example.com"` | no |

@@ -38,7 +38,6 @@ resource "kubernetes_stateful_set" "this" {
     name      = var.stateful_set_name
     namespace = var.namespace
     annotations = merge(
-      {},
       local.annotations,
       var.annotations,
       var.stateful_set_annotations
@@ -186,7 +185,6 @@ resource "kubernetes_stateful_set" "this" {
           name      = var.stateful_set_volume_claim_template_name
           namespace = var.namespace
           annotations = merge(
-            {},
             local.annotations,
             var.annotations,
             var.stateful_set_volume_claim_template_annotations
@@ -227,7 +225,6 @@ resource "kubernetes_service" "this" {
     name      = var.service_name
     namespace = var.namespace
     annotations = merge(
-      {},
       local.annotations,
       var.annotations,
       var.service_annotations
